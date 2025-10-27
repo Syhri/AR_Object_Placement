@@ -1,28 +1,28 @@
-# AR Object Placement – Setup & Run Guide
+# Penempatan Objek AR – Panduan Setup & Menjalankan
 
-This repo contains a Unity 6 (AR Foundation) project for placing objects in AR on Android (ARCore) and iOS (ARKit).
+Repositori ini berisi proyek Unity 6 (AR Foundation) untuk menempatkan objek di AR pada Android (ARCore) dan iOS (ARKit).
 
-## Requirements
+## Persyaratan
 
-- Unity Hub (latest)
+- Unity Hub (terbaru)
 - Unity Editor 6000.2.6f2 (Unity 6)
-  - Install via Unity Hub. If you open the project in Hub, it will offer to install the correct version.
-- C# IDE: Visual Studio 2022 (with Unity workload) or JetBrains Rider
-- Platform modules (install from Unity Hub when adding the Unity 6000.2.6f2 editor):
+  - Instal melalui Unity Hub. Jika Anda membuka proyek di Hub, Hub akan menawarkan untuk memasang versi yang sesuai.
+- IDE C#: Visual Studio 2022 (dengan Unity workload) atau JetBrains Rider
+- Modul platform (pasang dari Unity Hub saat menambahkan Editor 6000.2.6f2):
   - Android Build Support (Android SDK & NDK Tools, OpenJDK)
-  - iOS Build Support (only on macOS, for building to iPhone/iPad)
+  - iOS Build Support (hanya di macOS, untuk build ke iPhone/iPad)
 
-Project uses these key packages (already referenced in Packages/manifest.json):
+Proyek ini menggunakan paket utama berikut (sudah direferensikan di `Packages/manifest.json`):
 - AR Foundation: 6.2.0
 - ARCore XR Plugin (Android): 6.2.0
 - ARKit XR Plugin (iOS): 6.2.0
 - Input System: 1.14.2
 - URP (Universal Render Pipeline): 17.2.0
-- XR Simulation Environments: bundled under `ContentPackages/`
+- XR Simulation Environments: dibundel di folder `ContentPackages/`
 
-## Get the project
+## Mendapatkan Proyek
 
-Clone with Git (HTTPS):
+Clone dengan Git (HTTPS):
 
 ```powershell
 # Windows PowerShell
@@ -31,93 +31,93 @@ git clone https://github.com/Syhri/AR_Object_Placement.git
 cd AR_Object_Placement
 ```
 
-Or with SSH:
+Atau dengan SSH:
 
 ```bash
 git clone git@github.com:Syhri/AR_Object_Placement.git
 ```
 
-Open the folder in Unity Hub and select Editor version 6000.2.6f2 if prompted.
+Buka folder ini di Unity Hub dan pilih Editor versi 6000.2.6f2 jika diminta.
 
-## First open
+## Pertama Kali Membuka
 
-1. Let Unity import assets and resolve packages (first open can take a few minutes).
-2. If Unity asks to enable the new Input System, accept and let it reload.
-3. URP may prompt to create/assign a pipeline asset; if you see pink materials, go to:
+1. Biarkan Unity mengimpor aset dan menyelesaikan dependensi paket (pertama kali bisa memakan beberapa menit).
+2. Jika Unity meminta untuk mengaktifkan Input System baru, setujui lalu biarkan Unity restart.
+3. URP mungkin meminta membuat/menetapkan pipeline asset; jika Anda melihat material berwarna pink, buka:
    - Edit → Render Pipeline → Universal Render Pipeline → Upgrade Project Materials
 
-## XR/AR settings (verify)
+## Pengaturan XR/AR (Verifikasi)
 
-The project already includes AR Foundation + platform XR plugins. Verify these in Project Settings:
+Proyek sudah menyertakan AR Foundation dan plugin XR platform. Verifikasi di Project Settings:
 
 - Project Settings → XR Plug-in Management:
-  - Android: enable ARCore
-  - iOS (on macOS): enable ARKit
+  - Android: aktifkan ARCore
+  - iOS (di macOS): aktifkan ARKit
 - Player → Other Settings:
   - Active Input Handling = Input System Package (New)
-  - Scripting Backend = IL2CPP (recommended for device builds)
+  - Scripting Backend = IL2CPP (disarankan untuk build ke perangkat)
   - Target Architectures (Android) = ARM64
 
-## Run in Editor (XR Simulation)
+## Menjalankan di Editor (XR Simulation)
 
-You can preview AR logic using XR Simulation:
+Anda bisa pratinjau logika AR menggunakan XR Simulation:
 
 - Window → XR → Simulation
-- Select an environment (the project bundles simulation environments via `ContentPackages/`)
-- Open the scene `Assets/Scenes/SampleScene.unity`
-- Press Play
+- Pilih environment (proyek ini menyertakan environment simulasi di `ContentPackages/`)
+- Buka scene `Assets/Scenes/SampleScene.unity`
+- Tekan Play
 
-Note: Device sensors and actual plane detection will be simulated; for true AR testing, build to a device.
+Catatan: Sensor perangkat dan deteksi bidang (plane) akan disimulasikan; untuk pengujian AR yang sebenarnya, lakukan build ke perangkat.
 
-## Build to Android (ARCore)
+## Build ke Android (ARCore)
 
-Prereqs: Android device that supports ARCore; Developer options and USB debugging enabled.
+Prasyarat: Perangkat Android yang mendukung ARCore; Developer options dan USB debugging aktif.
 
 1. File → Build Settings → Android → Switch Platform
-2. Scenes In Build: add `Assets/Scenes/SampleScene.unity`
+2. Scenes In Build: tambahkan `Assets/Scenes/SampleScene.unity`
 3. Player Settings:
-   - Identification: set Package Name (e.g., `com.yourcompany.arobject`)
-   - Other Settings → Minimum API Level: Android 8.0 (API 26) or higher
-   - Scripting Backend: IL2CPP; Target Architecture: ARM64 only
-4. Connect device via USB (or use wireless ADB), then click Build And Run
+   - Identification: setel Package Name (mis. `com.yourcompany.arobject`)
+   - Other Settings → Minimum API Level: Android 8.0 (API 26) atau lebih tinggi
+   - Scripting Backend: IL2CPP; Target Architecture: hanya ARM64
+4. Sambungkan perangkat via USB (atau gunakan ADB nirkabel), lalu klik Build And Run
 
-If you see errors about missing SDK/NDK/JDK, reopen Unity Hub → Installs → 6000.2.6f2 → Add modules → ensure Android Build Support + SDK/NDK + OpenJDK are installed.
+Jika muncul error SDK/NDK/JDK tidak ditemukan, buka kembali Unity Hub → Installs → 6000.2.6f2 → Add modules → pastikan Android Build Support + SDK/NDK + OpenJDK terpasang.
 
-## Build to iOS (ARKit)
+## Build ke iOS (ARKit)
 
-Prereqs: macOS with Xcode installed, iPhone/iPad that supports ARKit.
+Prasyarat: macOS dengan Xcode terpasang, iPhone/iPad yang mendukung ARKit.
 
-1. On macOS, open the project in Unity 6000.2.6f2
+1. Di macOS, buka proyek dengan Unity 6000.2.6f2
 2. File → Build Settings → iOS → Switch Platform
-3. Scenes In Build: add `Assets/Scenes/SampleScene.unity`
-4. Player Settings: set Bundle Identifier (e.g., `com.yourcompany.arobject`)
-5. Build → open the generated Xcode project
-6. In Xcode: set your Team, signing & capabilities, then Build & Run to device
+3. Scenes In Build: tambahkan `Assets/Scenes/SampleScene.unity`
+4. Player Settings: setel Bundle Identifier (mis. `com.yourcompany.arobject`)
+5. Build → buka proyek Xcode yang dihasilkan
+6. Di Xcode: pilih Team Anda, atur signing & capabilities, lalu Build & Run ke perangkat
 
-## Folder notes
+## Catatan Folder
 
-- `Assets/Scenes/SampleScene.unity` – sample scene to include in builds
-- `ContentPackages/` – contains XR Simulation environments; keep this folder when sharing the repo
+- `Assets/Scenes/SampleScene.unity` – scene contoh yang perlu dimasukkan ke Build Settings
+- `ContentPackages/` – berisi XR Simulation environments; pastikan folder ini ikut saat berbagi repo
 
-## Troubleshooting
+## Pemecahan Masalah (Troubleshooting)
 
-- Unity version mismatch
-  - Use Unity Hub to install `6000.2.6f2`. Opening with a different major version (e.g., 2022/2023/6000.x other minor) may break packages.
-- Package restore errors
-  - Window → Package Manager → click “Resolve”/retry; check internet access; remove `Library/` then reopen the project if needed.
-- Pink materials / URP issues
-  - Edit → Render Pipeline → URP → Upgrade Project Materials; assign a URP Pipeline Asset in Project Settings → Graphics.
-- Android SDK/NDK/JDK missing
-  - Install via Unity Hub modules for the exact editor version. Avoid mixing external SDKs with Hub-managed ones.
-- ARCore not detected on device
-  - Ensure the device supports ARCore and Google Play Services for AR is installed/up to date.
-- iOS build/link errors
-  - Make sure you’re on a real device (not Simulator), with a provisioning profile set in Xcode, and ARKit plugin enabled in XR Plug-in Management.
+- Unity versi tidak sesuai
+  - Gunakan Unity Hub untuk memasang `6000.2.6f2`. Membuka dengan versi mayor berbeda (mis. 2022/2023/6000.x minor lain) dapat membuat paket bermasalah.
+- Gagal restore paket
+  - Window → Package Manager → klik “Resolve”/coba ulang; periksa koneksi internet; hapus folder `Library/` lalu buka ulang proyek jika perlu.
+- Material pink / masalah URP
+  - Edit → Render Pipeline → URP → Upgrade Project Materials; tetapkan URP Pipeline Asset di Project Settings → Graphics.
+- Android SDK/NDK/JDK tidak ditemukan
+  - Pasang melalui modul Unity Hub untuk versi editor yang sama persis. Hindari mencampur SDK eksternal dengan yang dikelola Hub.
+- ARCore tidak terdeteksi di perangkat
+  - Pastikan perangkat mendukung ARCore dan Google Play Services for AR terpasang/terbaru.
+- Error build/link iOS
+  - Pastikan target perangkat nyata (bukan Simulator), provisioning profile sudah diatur di Xcode, dan plugin ARKit aktif di XR Plug-in Management.
 
-## Optional
+## Opsional
 
-- Git LFS is not required for this repo unless you start adding very large binary assets (>100 MB). If you do, configure Git LFS before committing them.
+- Git LFS tidak wajib untuk repo ini kecuali Anda mulai menambahkan aset biner yang sangat besar (>100 MB). Jika ya, konfigurasikan Git LFS sebelum meng-commit.
 
 ---
 
-If teammates hit setup issues, share the exact Unity version (`6000.2.6f2`), platform, and a screenshot/log, and we can extend this guide.
+Jika tim menemui masalah setup, sertakan versi Unity tepat (`6000.2.6f2`), platform, dan screenshot/log. Panduan ini bisa diperluas sesuai kebutuhan.
