@@ -1,0 +1,78 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void ARPlaceCube_Update_m1F3172574FC109F902655ACB7A4DE155BB21938E (void);
+extern void ARPlaceCube_PlaceObject_m004F9B593178681BF60B2AF1F0CEE2DD4DD7B7A3 (void);
+extern void ARPlaceCube_SetIsPlacingToFalseWithDelay_m2FC550892EA84197793A2C55106CF0C618D4E15C (void);
+extern void ARPlaceCube__ctor_m2D47204EA20B63752561BAA82C0FB3F75D6DA2AC (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4__ctor_m4783FF156DA4804B9063E64603A010F92F5F40C9 (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_IDisposable_Dispose_m13ADCF7C45E0948BD8DB13112D465849D56B3E90 (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4_MoveNext_mF04B7E803C6BDE0C9CD2AAB4564785863C14D0D9 (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m164002679660F5462B03713E52B2C1A99955AFFC (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_IEnumerator_Reset_m14F900D7C289123FC95125615124025235DB66C2 (void);
+extern void U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_IEnumerator_get_Current_m159876424484275568A34EE6E8F8A56111A84F81 (void);
+extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
+extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[14] = 
+{
+	ARPlaceCube_Update_m1F3172574FC109F902655ACB7A4DE155BB21938E,
+	ARPlaceCube_PlaceObject_m004F9B593178681BF60B2AF1F0CEE2DD4DD7B7A3,
+	ARPlaceCube_SetIsPlacingToFalseWithDelay_m2FC550892EA84197793A2C55106CF0C618D4E15C,
+	ARPlaceCube__ctor_m2D47204EA20B63752561BAA82C0FB3F75D6DA2AC,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4__ctor_m4783FF156DA4804B9063E64603A010F92F5F40C9,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_IDisposable_Dispose_m13ADCF7C45E0948BD8DB13112D465849D56B3E90,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4_MoveNext_mF04B7E803C6BDE0C9CD2AAB4564785863C14D0D9,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m164002679660F5462B03713E52B2C1A99955AFFC,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_IEnumerator_Reset_m14F900D7C289123FC95125615124025235DB66C2,
+	U3CSetIsPlacingToFalseWithDelayU3Ed__4_System_Collections_IEnumerator_get_Current_m159876424484275568A34EE6E8F8A56111A84F81,
+	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
+	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[14] = 
+{
+	14988,
+	11572,
+	14804,
+	14988,
+	11352,
+	14988,
+	14624,
+	14804,
+	14988,
+	14804,
+	14988,
+	14988,
+	25860,
+	14988,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	14,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
